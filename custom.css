@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #F8BC0E;
+    --primary-dark-color: black;
+}
+
+@font-face {
+    font-family: 'Rubik Distressed';
+    src: url('assets/fonts/RubikDistressed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply default font */
+body {
+    font-family: 'Rubik Distressed', sans-serif;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: black;
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.add-btn:hover {
+    background-color: var(--primary-dark-color);
+    color: white;
+}
+
+.fa-trash {
+    pointer-events: none;
+}
+
+.error-style {
+    border-color: red;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.note-add-anim {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.note-delete-anim {
+    animation: fadeOut 0.3s ease-in forwards;
+}
+
+.no-note-container {
+    width: 30%; 
+    height: auto;
+    min-height: 150px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 15px; 
+}
+
+.no-note-img {
+    width: 60%; 
+    height: auto;
+    margin-left: 40px;
+}
+
+.no-note-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #666; 
+}
+
+
+

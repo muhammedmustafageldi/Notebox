@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <title>Notebox</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/images/app_logo.png">
+  <link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="d-flex flex-column h-100 text-center text-bg-dark">
+
+  <div class="cover-container d-flex flex-column w-100 h-100 p-3 mx-auto">
+    <!-- Header -->
+    <header class="mb-auto">
+      <div class="d-flex justify-content-start">
+        <h3 class="mb-0"><a href="/" class="text-decoration-none text-white">Notebox</a></h3>
+      </div>
+    </header>
+
+
+    <div class="d-flex flex-column justify-content-start align-items-center flex-grow-1">
+
+
+      <!-- Add note -->
+      <form class="w-50" action="#">
+        <div class="mb-3">
+          <h1 class="text-center mb-3">Enter your note</h1>
+          <input type="text" class="mb-3 form-control" id="noteTitle" placeholder="Enter your title...">
+          <textarea class="mb-3 form-control" id="noteTxt" rows="5" placeholder="Enter your note..."></textarea>
+          <!-- Hata mesajı için bir alan ekleyin -->
+          <div id="error-message" style="display: none; color: red;">Title and Note cannot be blank!</div>
+
+          <!-- Color picker -->
+          <div class="d-flex justify-content-center align-items-center">
+            <label for="colorInput" class="form-label p-3">Choose the color of your note</label>
+            <input type="color" class="form-control form-control-color" id="colorInput" value="#F8BC0E"
+              title="Choose your color">
+          </div>
+          <button type="submit" id="addButton" class="add-btn btn-warning mt-3">Add note</button>
+        </div>
+      </form>
+
+      <!-- Your notes -->
+      <br>
+      <h2 class="text-center">Your Notes</h2>
+      <br>
+
+      <!-- Note list -->
+      <ul class="list-unstyled w-50">
+
+      </ul>
+
+      <!--If the list is empty -->
+      <div class="no-note-container" style="display: none;">
+        <img src="assets/images/no-note.png" alt="empty" class="no-note-img">
+        <p class="no-note-text">No saved notes.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto text-white-50">
+      <p>Created by <a href="https://github.com/muhammedmustafageldi" target="_blank" class="text-white">Swanky</a></p>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <!-- My js source -->
+  <script src="notebox.js"></script>
+</body>
+
+</html>
